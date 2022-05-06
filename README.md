@@ -1,6 +1,10 @@
 # async-openai
 An async GPT-3 API wrapper written in python
 
+# Installation
+
+`pip install git+https://github.com/kajdev/async-openai`
+
 # Usage
 
 The wrapper is pretty simple at the moment.
