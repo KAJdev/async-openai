@@ -1,3 +1,17 @@
+[project]
+name = "async-openai"
+version = "1.0.0"
+description = "An async GPT-3 API wrapper written in python."
+license = "MIT"
+readme = "README.md"
+python = "^3.10"
+
+keywords = ["ai", "wrapper", "api", "pyproject.toml", "async", "gpt-3", "openai"]
+
+classifiers = [
+    "Topic :: Software Development"
+]
+
 [tool.poetry]
 name = "async-openai"
 version = "1.0.0"
