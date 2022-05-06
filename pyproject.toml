@@ -2,7 +2,6 @@
 name = "async-openai"
 version = "1.0.0"
 description = "An async GPT-3 API wrapper written in python."
-license = "MIT"
 readme = "README.md"
 python = "^3.10"
 
