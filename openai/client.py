@@ -54,26 +54,20 @@ class Client:
         if engine is None:
             engine = self.default_engine
 
-        try:
-            data = await self.request("POST", "/engines/{}/completions".format(engine.value), {
-                "prompt": prompt,
-                "max_tokens": max_tokens,
-                "temperature": temperature,
-                "top_p": top_p,
-                "n": n,
-                "stream": stream,
-                "stop": stop,
-                "presence_penalty": presence_penalty,
-                "frequency_penalty": frequency_penalty,
-            })
+        data = await self.request("POST", "/engines/{}/completions".format(engine.value), {
+            "prompt": prompt,
+            "max_tokens": max_tokens,
+            "temperature": temperature,
+            "top_p": top_p,
+            "n": n,
+            "stream": stream,
+            "stop": stop,
+            "presence_penalty": presence_penalty,
+            "frequency_penalty": frequency_penalty,
+        })
 
-            print(data)
+        if full_response:
+            return data
 
-            if full_response:
-                return data
-
-            choices = data.get("choices", [])
-            return choices[0].get("text", "")
-        except Exception as e:
-            print(e)
-            return "Alright it's time for me to go i think..."
+        choices = data.get("choices", [])
+        return choices[0].get("text", "")
