@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "async-openai"
+version = "1.0.0"
+description = "An async GPT-3 API wrapper written in python."
+authors = ["kajdev <kaj@otter.university>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+aiohttp = "^3.7.4"
+tomli = "^2.0.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["setuptools", "tomli"]
+build-backend = "setuptools.build_meta"
